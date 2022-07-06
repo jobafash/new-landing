@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Faqs } from './components/faq'
 import { DashLookUp } from './components/lookup'
 import JsonData from './data/data.json'
+import { Card } from './components/card'
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({})
@@ -114,6 +115,13 @@ const App = () => {
           <br />
           <br />
           <input type="button" style={ButtonStyle} value="Go" disabled="disabled" />
+        </div>
+        <div className='cards'>
+          <Card
+            img='https://picsum.photos/id/54/400/300'
+            title='What I learned from my visit to The Upside Down'
+            author='Nancy Wheeler'
+          />
         </div>
       </nav>
       <Faqs data={landingPageData.Faqs} />
